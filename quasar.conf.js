@@ -10,7 +10,7 @@ module.exports = function (ctx) {
     ],
 
     css: [
-      'app.styl'
+      'app.sass'
     ],
 
     extras: [
@@ -26,10 +26,17 @@ module.exports = function (ctx) {
     ],
 
     framework: {
-      // iconSet: 'ionicons-v4',
-      // lang: 'de', // Quasar language
+      iconSet: 'ionicons-v4',
+      lang: 'de', // Quasar language
 
-      // all: true, // --- includes everything; for dev only!
+      // Possible values for "all":
+      // * 'auto' - Auto-import needed Quasar components & directives
+      //            (slightly higher compile time; next to minimum bundle size; most convenient)
+      // * false  - Manually specify what to import
+      //            (fastest compile time; minimum bundle size; most tedious)
+      // * true   - Import everything from Quasar
+      //            (not treeshaking Quasar; biggest bundle size; convenient)
+      all: 'auto',
 
       components: [
         'QBadge',
@@ -64,12 +71,18 @@ module.exports = function (ctx) {
     supportIE: false,
 
     build: {
-      scopeHoisting: true,
       // vueRouterMode: 'history',
       // vueCompiler: true,
       // gzip: true,
       // analyze: true,
       // extractCSS: false,
+      
+      scopeHoisting: true,
+      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      showProgress: true,
+      gzip: false,
+      analyze: false,
+
       extendWebpack (cfg) {
         cfg.module.rules.push({
           enforce: 'pre',
@@ -85,7 +98,7 @@ module.exports = function (ctx) {
 
     devServer: {
       // https: true,
-      port: 8080,
+      port: 8081,
       open: false // opens browser window automatically
     },
 

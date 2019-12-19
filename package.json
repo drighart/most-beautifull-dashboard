@@ -1,11 +1,11 @@
 {
-  "name": "most-beautifull-dashboard",
+  "name": "today-i-will-be-happy",
   "version": "0.0.1",
-  "description": "Template for dashboard",
-  "productName": "Starter Dashboard",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
-  "author": "david.righart",
+  "author": "drighart <drighart>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "axios": "^0.18.1",
     "quasar": "^1.0.0"
   },
   "devDependencies": {
