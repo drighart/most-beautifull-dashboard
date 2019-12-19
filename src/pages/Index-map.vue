@@ -10,6 +10,11 @@
       <vl-layer-tile id="osm">
         <vl-source-osm></vl-source-osm>
       </vl-layer-tile>
+
+      <vl-feature>
+        <vl-geom-multi-point :coordinates="[[4.873064003762256, 52.20701787649713]]"></vl-geom-multi-point>
+        <vl-interaction-draw :source="drawCollection" :type="drawType"></vl-interaction-draw>
+      </vl-feature>
     </vl-map>
     <q-page-sticky position="top-left" :offset="[35, 100]">
         <div class="q-pa-md row items-start q-gutter-md">
@@ -40,9 +45,11 @@
 export default {
   data () {
     return {
-      zoom: 12,
-      center: [5.4717, 51.5240],
-      rotation: 0
+      zoom: 9,
+      center: [4.873064003762256, 52.20701787649713],
+      rotation: 0,
+      drawType: 'Point',
+      drawCollection: ''
     }
   }
 }
