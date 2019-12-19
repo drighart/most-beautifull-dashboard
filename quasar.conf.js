@@ -55,6 +55,9 @@ module.exports = function (ctx) {
         'QItemSection',
         'QItemLabel',
         'QImg',
+        'QTabs',
+        'QTab',
+        'QRouteTab',  
         'AddressbarColor'
       ],
 

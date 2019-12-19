@@ -2,21 +2,19 @@
   <q-layout view="lHh Lpr lFf">
     <q-toolbar class="text-primary">
       <q-btn flat round dense icon="menu" />
-      <img src="statics/icons/icon-128x128.png">
+      <img src="statics/app-logo-toolbar.png" to="/home">
       <q-toolbar-title>
         Afbeeldingen zoeken
       </q-toolbar-title>
       <q-space />
 
       <q-tabs v-model="tab" shrink>
-        <q-tab name="tab1" label="Map" />
-        <q-tab name="tab2" label="Tab 2" />
-        <q-tab name="tab3" label="Tab 3" />
+        <q-route-tab name="tab1" label="Afbeeldingen" to="/home" exact/>
+        <q-route-tab name="tab2" label="Map" to="/map" exact/>
       </q-tabs>
       <q-avatar>
         <img src="https://cdn.quasar.dev/img/boy-avatar.png">
       </q-avatar>
-      <q-btn flat round dense icon="more_vert" />
     </q-toolbar>
 
     <q-page-container>
