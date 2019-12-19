@@ -1,6 +1,12 @@
 <template>
   <q-page class="flex flex-center">
-    <img alt="Quasar logo" src="~assets/quasar-logo-full.svg">
+    <div class="q-gutter-l" style="width: 800px">
+      <q-input rounded outlined v-model="text" label="Voer een term in zoek naar een afbeelding">
+        <template v-slot:prepend>
+          <q-icon name="search" />
+        </template>
+      </q-input>
+    </div>
   </q-page>
 </template>
 
