@@ -6,11 +6,15 @@
       <q-toolbar-title>
         Afbeeldingen zoeken
       </q-toolbar-title>
+      <q-toolbar-title>
+        869123 geselecteerd
+      </q-toolbar-title>
       <q-space />
 
-      <q-tabs v-model="tab" shrink>
-        <q-route-tab name="tab1" label="Afbeeldingen" to="/home" exact/>
-        <q-route-tab name="tab2" label="Map" to="/map" exact/>
+      <q-tabs shrink>
+        <q-route-tab name="tab1" label="Zoeken" to="/home" exact/>
+        <q-route-tab name="tab2" label="Afbeeldingen" to="/home" exact/>
+        <q-route-tab name="tab3" label="Map" to="/map" exact/>
       </q-tabs>
       <q-avatar>
         <img src="https://cdn.quasar.dev/img/boy-avatar.png">
